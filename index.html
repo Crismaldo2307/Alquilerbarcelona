@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Análisis del aumento del precio del alquiler en Barcelona</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <div class="brand">C.A. Data</div>
+      <div class="nav-links">
+        <a href="index.html">Inicio</a>
+        <a href="busqueda.html">Búsqueda</a>
+        <a href="nosotros.html">Nosotros</a>
+        <a href="politica.html">Política de Datos</a>
+      </div>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h1>Análisis del aumento del precio del alquiler en Barcelona</h1>
+    <p>
+      Una exploración interactiva que combina indicadores de renta, turismo y comercio para comprender la dinámica del mercado residencial barcelonés entre 2014 y 2025.
+    </p>
+  </section>
+
+  <main>
+    <section class="section" id="resumen">
+      <h2>Resumen ejecutivo del estudio</h2>
+      <p>
+        Desde 2014, Barcelona ha experimentado un incremento sostenido en los precios de alquiler residencial, impulsado por la revalorización urbana, el auge del turismo internacional y la expansión del comercio minorista. En este portal consolidamos fuentes municipales, datos de mercado y flujos de visitantes para revelar correlaciones clave que ayudan a proyectar escenarios hasta 2025.
+      </p>
+      <div style="position: relative; overflow: hidden; aspect-ratio: 1920/1080">
+        <iframe src="https://share.synthesia.io/embeds/videos/26b3ea86-dac0-4435-91f5-f69ac75740c1"
+          loading="lazy"
+          title="Synthesia video player - Desentrañando el Alquiler en Barcelona: Un Análisis de Datos Revelador"
+          allowfullscreen
+          allow="encrypted-media; fullscreen; microphone;"
+          style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; border: none; padding: 0; margin: 0; overflow:hidden;">
+        </iframe>
+      </div>
+      <p>
+        El incremento del precio del alquiler mantiene una relación directa con la llegada de visitantes y con la actividad comercial en los ejes turísticos. Los distritos con mayor ocupación hotelera y dinamismo retail muestran incrementos superiores al promedio, mientras que los barrios de menor densidad turística presentan presiones moderadas.
+      </p>
+    </section>
+
+    <section class="section" id="graficos">
+      <h2>Indicadores interactivos</h2>
+      <p>
+        Explora cómo la evolución de la renta mensual promedio se correlaciona con la presión turística y el volumen comercial en Barcelona. Pasa el cursor por cada punto o barra para consultar los valores exactos.
+      </p>
+      <div class="grid-two">
+        <div class="chart-container">
+          <div style="height: 360px;">
+            <canvas id="rentLineChart"></canvas>
+          </div>
+          <p>
+            La línea verde muestra el incremento acumulado de la renta media, mientras que la línea punteada refleja el índice de presión turística normalizado.
+          </p>
+        </div>
+        <div class="chart-container">
+          <div style="height: 360px;">
+            <canvas id="tourismBarChart"></canvas>
+          </div>
+          <p>
+            Los ingresos comerciales agregados indican cómo los sectores retail y gastronómico se expandieron en paralelo al aumento de los alquileres.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="mapa">
+      <h2>Mapa de inmigración y precio de renta por distrito</h2>
+      <p>
+        La visualización resume la densidad de nuevos residentes y el precio promedio de alquiler por distrito, permitiendo identificar zonas tensionadas y focos de interés para inversores y reguladores.
+      </p>
+      <div class="embed-responsive" style="padding-bottom: 75%;">
+        <iframe width="600" height="450" src="https://lookerstudio.google.com/embed/reporting/c5a6bcc0-6c30-4456-80f8-aaff3b1803af/page/WSHdF" frameborder="0" style="border:0" allowfullscreen sandbox="allow-storage-access-by-user-activation allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox"></iframe>
+      </div>
+      <p>
+        Distritos como Eixample y Sant Martí concentran la mayor llegada de residentes internacionales, lo que se traduce en precios de renta por encima de la media metropolitana.
+      </p>
+    </section>
+
+    <section class="section" id="contacto">
+      <h2>Contacto</h2>
+      <p>
+        Comparte tus dudas o requerimientos y conversemos sobre oportunidades de inversión responsable y políticas basadas en datos.
+      </p>
+      <form id="contacto">
+        <label for="nombre">Nombre</label>
+        <input type="text" id="nombre" name="nombre" required>
+
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="empresa">Empresa</label>
+        <input type="text" id="empresa" name="empresa">
+
+        <label for="mensaje">Mensaje</label>
+        <textarea id="mensaje" name="mensaje" required></textarea>
+
+        <button type="submit">Enviar mensaje</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    © 2025 C.A. Data. Propietarios: Cristhyan Maldonado y Alonso Durand.
+  </footer>
+
+  <div class="chatbot-toggle" aria-label="Abrir asistente">💬</div>
+  <div class="chatbot-window">
+    <div class="chatbot-header">
+      <h4>Asistente IA</h4>
+      <span class="chatbot-close" aria-label="Cerrar">×</span>
+    </div>
+    <div class="chatbot-messages"></div>
+    <div class="chatbot-input">
+      <input type="text" placeholder="Escribe tu consulta..." aria-label="Mensaje">
+      <button type="button">Enviar</button>
+    </div>
+  </div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
